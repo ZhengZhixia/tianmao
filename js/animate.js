@@ -1,6 +1,13 @@
 /*
+  函数 colorAnimate (obj,attr,val,dur,fn,callback)
+  obj   要处理的对象
+  attr  要处理的属性  background   color
+  val   最终颜色 rbg    #
+  fn    动画的方式
+  callback  变化完成之后要处理的内容
+*/
+/*
    动画函数 animate (obj,attrObj,dur,fun,callback)
-   
    obj   要动画的对象
    attrobj   要动画的属性对象{width:xxxx,height:xxx,left:xxxx,top:xxxx,opacity:xxx}
    dur   持续时间
@@ -43,7 +50,6 @@
     Tween.Linear     
 	Tween.Quad.easeIn
 */
-
  Tween = {  
     Linear: function(t,b,c,d){ return c*t/d+b; },
     Quad: {
@@ -327,10 +333,6 @@
 	 case "right":
 	 case "padding":
 	 case "margin":
-  case "marginLeft":
-  case "marginRight":
-  case "marginTop":
-  case "marginBottom":
 	 case "paddingLeft":
 	 case "paddingRight":
 	 obj.style[attr]=val+"px";
@@ -358,15 +360,6 @@
    }
  }
 
-
-/*
-  函数 colorAnimate (obj,attr,val,dur,fn,callback)
-  obj   要处理的对象
-  attr  要处理的属性  background   color
-  val   最终颜色 rbg    #
-  fn    动画的方式
-  callback  变化完成之后要处理的内容
-*/
  //颜色渐变动画
  //获得颜色
 function getColor (color) {
@@ -394,7 +387,7 @@ function getColor (color) {
   函数 colorAnimate (obj,attr,val,dur,fn,callback)
   obj   要处理的对象
   attr  要处理的属性  background   color
-  val   最终颜色 rbg    #
+  val   最终颜色 rbg  #
   fn    动画的方式
   callback  变化完成之后要处理的内容
 */
